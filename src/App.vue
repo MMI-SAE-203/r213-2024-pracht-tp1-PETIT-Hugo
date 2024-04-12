@@ -20,12 +20,20 @@ const menuIsOpen = ref(false)
     menu
   </button>
   <!-- nav#mainNav>ul>li*3>a[href="#"]{item $} -->
+  <Transition
+  class="transition-transform duration-1000"
+  enter-from-class="-translate-x-full"
+  enter-to-class="translate-x-0"
+  leave-active-class="-translate-x-full">
+
   <nav id="mainNav" v-show="menuIsOpen">
     <ul>
-      <li><RouterLink to="/index.vue">Accueil</RouterLink></li>
-      <li><RouteurLink to="/accordeon.vue">Accordéon</RouteurLink></li>
+      <li><RouterLink to="/">Accueil</RouterLink></li>
+      <li><RouterLink to="/accordeon">Accordéon</RouterLink></li>
+      <li><RouterLink to="/boucle">Boucle sur les données</RouterLink></li>
     </ul>
   </nav>
+</Transition>
   </header>
   
   <RouterView v-slot="{ Component }">
