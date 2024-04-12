@@ -20,7 +20,7 @@ onErrorCaptured((err, instance, info) => {
         </li>
       </ul>
     </nav>
-      <button
+    <button
     aria-controls="mainNav"
     aria-expanded="true"
     class="rounded-full border-2 border-red-600 bg-red-300 px-2"
@@ -30,9 +30,8 @@ onErrorCaptured((err, instance, info) => {
   <!-- nav#mainNav>ul>li*3>a[href="#"]{item $} -->
   <nav id="mainNav">
     <ul>
-      <li><a href="#">item 1</a></li>
-      <li><a href="#">item 2</a></li>
-      <li><a href="#">item 3</a></li>
+      <li><RouterLink to="@/pages/index.vue">Accueil</RouterLink></li>
+      <li><RouteurLink to="@/pages/accordeon.vue">Accordéon</RouteurLink></li>
     </ul>
   </nav>
   </header>
