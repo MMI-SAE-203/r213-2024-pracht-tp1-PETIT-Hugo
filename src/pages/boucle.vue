@@ -29,4 +29,9 @@ const sectionsData = [
 
 <template>
     <h1>Boucle sur les données</h1>
+    <section v-for="({ label, texte }, key) of sectionsData" :v-key="key">
+  <pre class="font-mono">key : {{ key }}</pre>
+  <button class="font-mono">label : {{ label }}</button>
+  <p class="font-mono">texte : {{ texte }}</p>
+</section>
 </template>
